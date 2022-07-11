@@ -1,26 +1,50 @@
+#Make a program that asks for the four grades of 3 students, calculate and store the average of each student in a vector, print the number of students with an average greater than or equal to 7.0.
 
-aluno1 = []
-aluno2 = []
-aluno3 = []
+student1 = []
+student2 = []
+student3 = []
+students_average = []
 
 
-alunos = [aluno1]
+students = [student1, student2, student3]
+
+print("Enter the grades of the student one")
+for x in range(0, 4):
+    grade_student1 = float(input())
+    student1.append(grade_student1)   
+sum_student1 = sum(student1)
+average_student1 = round(sum_student1 / len(student1))
+student1.clear()
+student1.append(average_student1)
+
+print("Enter the grades of the student two")
+for x in range(0, 4):
+    grade_student2 = float(input())
+    student2.append(grade_student2)   
+sum_student2 = sum(student2)
+average_student2 = round(sum_student2 / len(student2))
+student2.clear()
+student2.append(average_student2)
+
+print("Enter the grades of the student three")
+for x in range(0, 4):
+    grade_student3 = float(input())
+    student3.append(grade_student3)   
+sum_student3 = sum(student3)
+average_student3 = round(sum_student3 / len(student3))
+student3.clear()
+student3.append(average_student3)
 
 
-for x in range(0, 3):
-    nota_aluno1 = int(input("Informe a nota do aluno 1 "))
-    aluno1.append(nota_aluno1)   
-sum_aluno1 = sum(aluno1)
-media_aluno1 = round(sum_aluno1 / len(aluno1))
-aluno1.clear()
-aluno1.append(media_aluno1)
+for i in range(0,1):
+    for i in student1:
+        if i >= 7:
+            students_average.append(i) 
+    for i in student2:
+        if i >= 7:
+            students_average.append(i)
+    for i in student3:
+        if i >= 7:
+            students_average.append(i) 
 
-#for x in range(0, 3):
-    #nota_aluno2 = int(input("Informe a nota do aluno 2 "))
-    #aluno2.append(nota_aluno2)
-
-#for x in range(0, 3):
-    #nota_aluno3 = int(input("Informe a nota do aluno 3 "))
-    #aluno3.append(nota_aluno3)
-print(media_aluno1)    
-print(alunos)
+print(f"These are the average grades of the students who passed: {students_average}")
