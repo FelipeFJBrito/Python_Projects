@@ -9,7 +9,7 @@ from turtle import up, window_height, window_width
 
 GAME_WIDTH = 700
 GAME_HEIGHT = 700
-SPEED = 100
+SPEED = 120
 SPACE_SIZE = 50
 BODY_PARTS = 3
 SNAKE_COLOR  = "green"
